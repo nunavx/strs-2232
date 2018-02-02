@@ -1,0 +1,145 @@
+[filemask="*.exe;*.lc"]
+
+//STRS by novanakal@rf.reborn-gaming.com
+//Big Thx To Edaks @ Maindev
+//do not edit this Part
+
+
+struct RF2232Launcher
+{
+child "LPServerInfo" [offset=1044376, group="LPServerInfo Section",count=1];
+child "LPServerInfo Port" [offset=1040014, group="LPServerInfo Section",count=1];
+child "newRF.CAB" [offset=0x0FE318, group="newRF.CAB Section",count=1];
+child "newRF.CAB Port" [offset=0x101F05, group="newRF.CAB Section",count=1];
+child "Launcher Version" [offset=0x0F7050, group="newRF.CAB Section",count=1];
+child "IP_PatchInfo" [offset=1047576, group="PatchInfo Section",count=1];
+child "PatchInfo Port" [offset=0x1031D2, group="PatchInfo Section",count=1];
+child "PatchInfo.z Password" [offset=0x0F70A8, group="PatchInfo Section",count=1];
+child "LoginPort" [offset=0x232A6, group="Port Login to Server",count=1];
+child "Opening Song"  [offset=0x1032b6, group="Intro Launcher"];
+}
+
+
+//////////////////////////////////////////////
+// -----> Start LPServerInfo Config <----- // 
+struct "LPServerInfo" [preload=1]
+{
+str[len=320] "ko-kr";
+str[len=320] "pt-br";
+str[len=320] "zh-cn";
+str[len=320] "en-gb";
+str[len=320] "en-id";
+str[len=320] "ja-jp";
+str[len=320] "en-ph";
+str[len=320] "ru-ru";
+str[len=320] "zh-tw";
+str[len=320] "none-global";
+}
+
+struct "LPServerInfo Port" [preload=1]
+{
+str[len=10] "DLL LPServerInfo 2";
+str[len=17, hidden] "Hidden";
+str[len=10] "DLL LPServerInfo 2";
+str[len=3, hidden] "Hidden";
+str[len=6] "Port LPServerInfo 1";
+str[len=6] "Port LPServerInfo 2";
+}
+// -----> End LPServerInfo Config <----- /// 
+////////////////////////////////////////////
+
+
+
+
+//////////////////////////////////////////////
+// -----> Start newRF.CAB Config <----- /////
+struct "newRF.CAB" [preload=1]
+{
+str[len=320] "ko-kr";
+str[len=320] "pt-br";
+str[len=320] "zh-cn";
+str[len=320] "en-gb";
+str[len=320] "en-id";
+str[len=320] "ja-jp";
+str[len=320] "en-ph";
+str[len=320] "ru-ru";
+str[len=320] "zh-tw";
+str[len=320] "none-global";
+}
+
+struct "newRF.CAB Port" [preload=1]
+{
+str[len=10] "DLL newRF.CAB";
+str[len=37, hidden] "Hidden";
+str[len=4] "Port newRF.CAB 1";
+str[len=4] "Port newRF.CAB 2";
+str[len=4] "Port newRF.CAB 3";
+}
+
+
+struct "Launcher Version" [preload=1]
+{
+str[len=3] "Launcher Version";
+}
+// -----> End newRF.CAB Config <----- ////// 
+///////////////////////////////////////////
+
+
+
+
+//////////////////////////////////////////////
+// -----> Start PatchInfo Config <----- /////
+struct "IP_PatchInfo" [preload=1]
+{
+str[len=320] "ko-kr";
+str[len=320] "pt-br";
+str[len=320] "zh-cn";
+str[len=320] "en-gb";
+str[len=320] "en-id";
+str[len=320] "ja-jp";
+str[len=320] "en-ph";
+str[len=320] "ru-ru";
+str[len=320] "zh-tw";
+str[len=320] "none-global";
+}
+
+struct "PatchInfo Port" [preload=1]
+{
+str[len=10] "DLL PatchInfo";
+str[len=14, hidden] "Hidden";
+str[len=10] "Port PatchInfo 1";
+str[len=10, hidden] "Hidden";
+str[len=10] "Port PatchInfo 2";
+str[len=10, hidden] "Hidden";
+str[len=10] "Port PatchInfo 3";
+}
+
+struct "PatchInfo.z Password" [preload=1]
+{
+str[len=11] "PatchInfo Password";
+}
+// -----> End PatchInfo Config <----- ////// 
+////////////////////////////////////////////
+
+
+////////////////////////////////////////
+// -----> Start LoginPort <----- /////
+struct "LoginPort" [preload=1]
+{
+i32 "LoginPort";
+}
+// -----> End LoginPort <----- /////
+/////////////////////////////////////
+
+
+
+
+
+////////////////////////////////////////
+// -----> Opening Song <----- /////
+struct "Opening Song" [preload=1]
+{
+str[len=30] "Opening Song";
+}
+// -----> Opening Song <----- /////
+/////////////////////////////////////

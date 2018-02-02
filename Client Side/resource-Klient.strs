@@ -1,0 +1,148 @@
+[filemask="Resource.dat"]
+
+struct ResourceFile
+{
+u32 PlayerBoneBlocks;
+child Bone [group="PlayerBone",count=PlayerBoneBlocks];
+
+seek (PlayerBoneBlocks*260+4);
+
+u32 PlayerMeshBlocks;
+child Mesh [group="PlayerMesh", offset=(PlayerBoneBlocks*260+8),count=PlayerMeshBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+8);
+
+u32 PlayerAniBlocks;
+child Ani [group="PlayerAni", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+12),count=PlayerAniBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+12);
+
+u32 MonsterBoneBlocks;
+child Bone [group="MonsterBone", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+16),count=MonsterBoneBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+16);
+
+u32 MonsterMeshBlocks;
+child Mesh [group="MonsterMesh", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+20),count=MonsterMeshBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+20);
+
+u32 MonsterAniBlocks;
+child Ani [group="MonsterAni", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+24),count=MonsterAniBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+24);
+
+u32 AnimusBoneBlocks;
+child Bone [group="AnimusBone", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+28),count=AnimusBoneBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+28);
+
+u32 AnimusMeshBlocks;
+child Mesh [group="AnimusMesh", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+32),count=AnimusMeshBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+32);
+
+u32 AnimusAniBlocks;
+child Ani [group="AnimusAni", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+36),count=AnimusAniBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+36);
+
+u32 GTBoneBlocks;
+child Bone [group="GTBone", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+40),count=GTBoneBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+40);
+
+u32 GTMeshBlocks;
+child Mesh [group="GTMesh", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+44),count=GTMeshBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+44);
+
+u32 GTAniBlocks;
+child Ani [group="GTAni", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+48),count=GTAniBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+48);
+
+u32 NPCBoneBlocks;
+child Bone [group="NPCBone", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+52),count=NPCBoneBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+52);
+
+u32 NPCMeshBlocks;
+child Mesh [group="NPCMesh", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+56),count=NPCMeshBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+56);
+
+u32 NPCAniBlocks;
+child Ani [group="NPCAni", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+60),count=NPCAniBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+NPCAniBlocks*244+64);
+
+u32 ItemMeshBlocks;
+child Mesh [group="ItemMesh", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+NPCAniBlocks*244+68),count=ItemMeshBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+NPCAniBlocks*244+ItemMeshBlocks*328+68);
+
+u32 ItemAniBlocks;
+child Ani [group="ItemAni", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+NPCAniBlocks*244+ItemMeshBlocks*328+72),count=ItemAniBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+NPCAniBlocks*244+ItemMeshBlocks*328+ItemAniBlocks*244+72);
+
+u32 MAUBoneBlocks;
+child Bone [group="MAUBone", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+NPCAniBlocks*244+ItemMeshBlocks*328+ItemAniBlocks*244+76),count=MAUBoneBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+NPCAniBlocks*244+ItemMeshBlocks*328+ItemAniBlocks*244+MAUBoneBlocks*260+76);
+
+u32 MAUMeshBlocks;
+child Mesh [group="MAUMesh", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+NPCAniBlocks*244+ItemMeshBlocks*328+ItemAniBlocks*244+MAUBoneBlocks*260+80),count=MAUMeshBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+NPCAniBlocks*244+ItemMeshBlocks*328+ItemAniBlocks*244+MAUBoneBlocks*260+MAUMeshBlocks*328+80);
+
+u32 MAUAniBlocks;
+child Ani [group="MAUAni", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+NPCAniBlocks*244+ItemMeshBlocks*328+ItemAniBlocks*244+MAUBoneBlocks*260+MAUMeshBlocks*328+84),count=MAUAniBlocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+NPCAniBlocks*244+ItemMeshBlocks*328+ItemAniBlocks*244+MAUBoneBlocks*260+MAUMeshBlocks*328+MAUAniBlocks*244+92);
+
+u32 PlayerAni2Blocks;
+child Ani [group="PlayerAni2", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+NPCAniBlocks*244+ItemMeshBlocks*328+ItemAniBlocks*244+MAUBoneBlocks*260+MAUMeshBlocks*328+MAUAniBlocks*244+96),count=PlayerAni2Blocks];
+
+seek (PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+NPCAniBlocks*244+ItemMeshBlocks*328+ItemAniBlocks*244+MAUBoneBlocks*260+MAUMeshBlocks*328+MAUAniBlocks*244+PlayerAni2Blocks*244+104);
+
+u32 PlayerAni3Blocks;
+child Ani [group="PlayerAni3", offset=(PlayerMeshBlocks*328+PlayerBoneBlocks*260+PlayerAniBlocks*244+MonsterBoneBlocks*260+MonsterMeshBlocks*328+MonsterAniBlocks*244+AnimusBoneBlocks*260+AnimusMeshBlocks*328+AnimusAniBlocks*244+GTBoneBlocks*260+GTMeshBlocks*328+GTAniBlocks*244+NPCBoneBlocks*260+NPCMeshBlocks*328+NPCAniBlocks*244+ItemMeshBlocks*328+ItemAniBlocks*244+MAUBoneBlocks*260+MAUMeshBlocks*328+MAUAniBlocks*244+PlayerAni2Blocks*244+108),count=PlayerAni3Blocks];
+}
+
+struct Bone [preload=1]
+{
+x32 [tag=ID] DWORD;
+cstr [len=128] BoneFolder;
+cstr [len=64] BnFile;
+cstr [len=64] BbxFile;
+}
+
+struct Mesh [preload=1]
+{
+x32 [tag=ID] DWORD;
+x32 [tag=ID2] DWORD;
+cstr [len=128] MshFolder;
+cstr [len=64] MshFile;
+cstr [len=128] TextureFolder;
+}
+
+struct Ani [preload=1]
+{
+x32 [tag=ID] DWORD;
+x32 [tag=ID2] DWORD;
+cstr [len=128] AniFolder;
+cstr [len=64] AniFile;
+u32 [tag="------"] DWORD;
+u32 [tag="------"] DWORD;
+u32 [tag="------"] DWORD;
+u32 [tag="------"] DWORD;
+u32 [tag="------"] DWORD;
+u32 [tag="------"] DWORD;
+u32 [tag="------"] DWORD;
+u32 [tag="------"] DWORD;
+u32 [tag="------"] DWORD;
+u32 [tag="------"] DWORD;
+u32 [tag="------"] DWORD;
+}

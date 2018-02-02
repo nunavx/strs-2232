@@ -1,0 +1,25 @@
+[filemask="RF_Online.bin"]
+struct RFOnlineBinFile
+{
+    child "Enable Dual Login"                	  [group="Dual Login",    offset=(0x2FE1D2),    count=1];
+    child "Window Count"        				  [group="Dual Login",    offset=(0x2FE163),    count=1];
+	child "Verkey"                                [offset=(0x64D0F0),    count=1];
+}
+
+struct "Enable Dual Login" [preload=1, tableview=1]
+	{
+	cstr [value=("132=OFF | 133=ON")] Information;
+    u8 [tag="Change Here!"];
+	}
+
+struct "Window Count" [preload=1, tableview=1]
+	{
+	cstr [value=("Total of Window/Client | Ex=1/2/3/4/etc")] Information;
+    u8 [tag="Change Here!"];
+	}
+
+struct "Verkey" [preload=1, tableview=1]
+	{
+	cstr [value=("Change Your Verkey Here!!")] Information;
+	str[len=32] "Verkey Code :";
+	}

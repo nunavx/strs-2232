@@ -1,0 +1,1093 @@
+enum WepType
+{
+	"Knife",
+	"Sword",
+	"Axe",
+	"Mace",
+	"Spear",
+	"Bow",
+	"Gun",
+	"Laun",
+	"TK",
+	"Staff",
+	"Mining",
+	"Grenade"
+}
+
+enum MobAtkType
+{
+	Melee
+	Range
+}
+
+enum MobRace
+{
+	Beast=0
+	Plant=1
+	Reptile=2
+	Crustacean=3
+	Insect=4
+	Mechanical=5
+	Novajan=6
+	Mutant=7
+	Humanoid=8
+	Elf=9
+	Herodian=10
+}
+
+enum MobAoe
+{
+	NonAoe = 0
+	Aoe = 6
+}
+
+enum RaceCode
+{
+	Bellato
+	Bellato
+	Bellato
+	Bellato
+	BellM=5
+	Bellato=15
+	BellF=21
+	CoraM=37
+	CoraF=53
+	Accretia=64
+	Accretia=65
+	Accretia=66
+	Accretia=67
+	Acc=69
+	Bellato=112
+	Bellato=113
+	Bellato=114
+	Bellato=115
+	Bellato=116
+	Cora=128
+	Cora=129
+	Cora=130
+	Cora=131
+	Cora=132
+	"Cora/Bell"=144
+	"Cora/Bell"=145
+	"Cora/Bell"=148
+	AllRaces=160
+	AllRaces=161
+	AllRaces=162
+	AllRaces=163
+}
+
+enum WepCode
+{
+	Sword=1
+	DualSword=2
+	Knife=3
+	Knife=4
+	TK=5
+	1hAxe=6
+	2hAxe=7
+	TAxe=8
+	DualAxe=9
+	1hMace=10
+	2hMace=11
+	Staff=12
+	Staff=13
+	Spear=14
+	Bow=15
+	XBow=16
+	Gun=17
+	DualGun=18
+	ShotGun=19
+	Launcher=20
+	Faust=21
+	Vulcan=22
+	Flamer=23
+	SmBeamGun=24
+	DualBeamGun=25
+	LgBeamGun=26
+	MdBeamGun=27
+	MiningTool=28
+	Grenade=32
+}
+
+enum ArmorCode1
+{
+	Helmet=0
+	Face=1
+	Upper=2
+	Lower=3
+	Gloves=4
+	Boots=5
+	Cape=6
+	Shield=7
+	Amulet=8
+	Ring=9
+}
+
+enum IDwep
+{
+	Knife=0xCA0D
+	Sword=0xD216
+	Axe=0xC017
+	Mace=0xCC00
+	Staff=0xD213
+	Spear=0xD20F
+	Bow=0xC10E
+	Gun=0xC508
+	Launcher=0xCB14
+	Flamer=0xC50B
+	Faust=0xC500
+	TK=0xC30A
+	TA=0xC300
+	MiningTool=0xCC13
+	Nade=0xC604
+	"Purple Knife"=0xCA07
+	"Purple Sword"=0xD207
+	"Purple Axe"=0xD707
+	"Purple Mace"=0xCC07
+	"Purple Staff"=0xD307
+	"Purple Spear"=0xCF07
+	"Purple Bow"=0xC107
+	"Purple Gun"=0xC507
+	"Purple Launcher"=0xD407
+	"Purple Flamer"=0xCB07
+	"Purple Faust"=0xC007
+	"C-0 Knife"=0xCA09
+	"C-0 Sword"=0xD209
+	"C-0 Axe"=0xD709
+	"C-0 Mace"=0xCC09
+	"C-0 Staff"=0xD309
+	"C-0 Spear"=0xCF09
+	"C-0 Bow"=0xC109
+	"C-0 Gun"=0xC509
+	"C-0 Launcher"=0xD409
+	"C-0 Flamer"=0xCB09
+	"C-0 Faust"=0xC009
+	"C-1 Knife"=0xCA0A
+	"C-1 Sword"=0xD20A
+	"C-1 Axe"=0xD70A
+	"C-1 Mace"=0xCC0A
+	"C-1 Staff"=0xD30A
+	"C-1 Spear"=0xCF0A
+	"C-1 Bow"=0xC10A
+	"C-1 Gun"=0xC50A
+	"C-1 Launcher"=0xD40A
+	"C-1 Flamer"=0xCB0A
+	"C-1 Faust"=0xC00A
+	"C-2 Knife"=0xCA15
+	"C-2 Sword"=0xD215
+	"C-2 Axe"=0xD715
+	"C-2 Mace"=0xCC15
+	"C-2 Staff"=0xD315
+	"C-2 Spear"=0xCF15
+	"C-2 Bow"=0xC115
+	"C-2 Gun"=0xC515
+	"C-2 Launcher"=0xD415
+	"C-2 Flamer"=0xCB15
+	"C-2 Faust"=0xC015
+	"C-3 Knife"=0xCA0C
+	"C-3 Sword"=0xD20C
+	"C-3 Axe"=0xD70C
+	"C-3 Mace"=0xCC0C
+	"C-3 Staff"=0xD30C
+	"C-3 Spear"=0xCF0C
+	"C-3 Bow"=0xC10C
+	"C-3 Gun"=0xC50C
+	"C-3 Launcher"=0xD40C
+	"C-3 Flamer"=0xCB0C
+	"C-3 Faust"=0xC00C
+	"C-4 Knife"=0xCA10
+	"C-4 Sword"=0xD210
+	"C-4 Axe"=0xD710
+	"C-4 Mace"=0xCC10
+	"C-4 Staff"=0xD310
+	"C-4 Spear"=0xCF10
+	"C-4 Bow"=0xC110
+	"C-4 Gun"=0xC510
+	"C-4 Launcher"=0xD410
+	"C-4 Flamer"=0xCB10
+	"C-4 Faust"=0xC010
+	"C-5 Knife"=0xCA19
+	"C-5 Sword"=0xD219
+	"C-5 Axe"=0xD719
+	"C-5 Mace"=0xCC19
+	"C-5 Staff"=0xD319
+	"C-5 Spear"=0xCF19
+	"C-5 Bow"=0xC119
+	"C-5 Gun"=0xC519
+	"C-5 Launcher"=0xD419
+	"C-5 Flamer"=0xCB19
+	"C-5 Faust"=0xC019
+	EventWep=0xC207
+}
+
+enum IDType
+{
+	"White/Wind"=0x0000
+	"Int/Endurance"=0x0001
+	Pain=0x0002
+	Smart=0x0003
+	Strong=0x0004
+	Solid=0x0005
+	Strength=0x0006
+	AdvStrength=0x0007
+	Vamp=0x0008
+	Guardian=0x0009
+	Sharp=0x000A
+	Grand=0x000B
+	Relic=0x0019
+	Event=0x0011
+}
+
+enum OtherCode
+{
+	Ore=0
+	Resource=1
+	BootyHuntingItem=2
+	Tool=4
+	Bag=5
+	Battery=6
+	MauKey=7
+	Map=11
+	Scroll=12
+	Dungeon=13
+	Tower=14
+	Trap=15
+	Ticket=16
+	SoccerBall=21
+	LauncherSiege=29
+	FlamerSiege=30
+	FaustSiege=31
+	
+}
+
+enum OtherCode1
+{
+	Dark
+	Holy
+	Fire
+	Water
+	Earth
+	Wind
+	Animus
+	RecoveryItem
+	Box
+	UnMannedMiner=18
+}
+
+enum MauCode1
+{
+	UnitHead=1
+	UnitUpper=2
+	UnitLower=3
+	unitArms=4
+	UnitShoulder=5
+	UnitBack=6
+	UnitBullet=7
+}
+
+enum PotCode
+{
+	HP=0
+	FP=1
+	SP=2
+	Ammo=3
+	Arrow=4
+	Adrenaline=5
+	DecodeAbility=6
+	ThanksGiving=7
+	Potion=8
+	Potion=9
+	Potion=10
+	Potion=11
+	Potion=13
+}
+
+enum LauType
+{
+	None=0,
+	Flamer=1,
+	Lau=2
+}
+
+enum AllyRaceC
+{
+  All="-1",
+  All=255,
+  Bellato=0,
+  Cora=1,
+  Accretia=2
+}
+
+enum AllyRaceS
+{
+  Bellato=0,
+  Cora=1,
+  Accretia=2,
+  All=255
+}
+
+enum MobType
+{
+  	Normal=0,
+	Ace=1,
+	PB=2,
+	Champion=3,
+	Elite=4,
+	Hero=5,
+	Solo
+}
+
+enum YesNo
+{
+  No=0,
+  Yes=1,
+  AmmoSpell=2
+}
+
+enum Active
+{
+  Active=1,
+  Inactive=0
+}
+
+enum ShopCode
+{
+  Weapon=0,
+  Potion=1,
+  Shield=2,
+  Unit=4,
+  Resources=5,
+  Booty=6,
+  Exchange=10,
+  General=23,
+  Force=16,
+  GuildMaster=12,
+  Ticket=18,
+  Hero1=26,
+  Dungeon=20,
+  FMA=21,
+  PortalGuide=22,
+  StoneMaster=24,
+  MiscSeller=25,
+  Special=19,
+  GuildRoom=13
+}
+
+enum ArmorCode
+{
+  Helmet=0,
+  Helmet=500,
+  Face=1,
+  Upper=2,
+  Upper=502,
+  Lower=3,
+  Lower=503,
+  Gloves=4,
+  Gloves=504,
+  Boots=5,
+  Boots=505,
+  Shield=7
+  
+}
+
+enum StoreType
+{
+	Weapons=0,
+	"Potion/AH"=1,
+	Armor=2,
+	Mau=4,
+	OreRefine=5,
+	Sundries=6,
+	Banker=10,
+	Guild=12,
+	RaceManager=15,
+	Force=16,
+	TicketAgent=18,
+	GateKeeper=20,
+	UMT=21,
+	PortalGuide=22
+}
+
+enum MenuCode
+{
+  None=0,
+  ItemTrade=1,
+  Quest=2,
+  Exchange=4,
+  ProccessOre=5,
+  OpeningStorage=6,
+  KillPoint=9,
+  MauTuning=10,
+  MauDelivery=11,
+  ClassPromotion=12,
+  BindLocation=13,
+  Ranking=14,
+  CreateGuild=15,
+  InformingGuild=16,
+  UsingStorage=18,
+  RegisterItem=19,
+  ItemPurchase=20,
+  ClassRefine=21,
+  Combination=22,
+  RlNomination=23,
+  GuildRank=26,
+  ScrambleInfo=27,
+  CreateDungeonGate=32,
+  ManageUMT=33,
+  TaxRateInfo=34,
+  VCPort=35,
+  UMTStorage=36,
+  ProccessStone=38,
+  CraftStone=39,
+  MakingGem=40,
+  DesireableStone=41,
+  GlowingStone=42,
+  ShinningGem=43,
+  GuildRoom=44,
+  PriceList=45,
+  CombineRecipe=46,
+  RecycleBoxTrade=48,
+  TradeBoard=50,
+  LotusFlowerDelivery=51,
+  BuddistExchange=52,
+  Conversation=53,
+  RecoverCertainPoint=54,
+  UnionWarriorReward50=55,
+  UnionRangerReward50=56,
+  UnionForceReward50=57,
+  AllianceWarriorReward50=58,
+  AllianceRangerReward50=59,
+  AllianceForceReward50=60,
+  EmpireWarriorReward50=61,
+  EmpireRangerReward50=62,
+  EmpireForceReward50=63,
+  UnionWarriorReward53=64,
+  UnionRangerReward53=65,
+  UnionForceReward53=66,
+  AllianceWarriorReward53=67,
+  AllianceRangerReward53=68,
+  AllianceForceReward53=69,
+  EmpireWarriorReward53=70,
+  EmpireRangerReward53=71,
+  EmpireForceReward53=72,
+  UnionWarriorReward55=73,
+  UnionRangerReward55=74,
+  UnionForceReward55=75,
+  AllianceWarriorReward55=76,
+  AllianceRangerReward55=77,
+  AllianceForceReward55=78,
+  EmpireWarriorReward55=79,
+  EmpireRangerReward55=80,
+  EmpireForceReward55=81,
+  TalicCrystalExchange=82,
+  SmallUnionReward=83,
+  SmallAllianceReward=84,
+  SmallEmpireReward=85,
+  EmpiresNormalArmorReward50=86,
+  EmpiresNormalArmorReward53=87,
+  EmpiresNormalArmorReward55=88,
+  UnionsNormalArmorReward50=89,
+  UnionsNormalArmorReward53=90,
+  UnionsNormalArmorReward55=91,
+  AllianceNormalArmorReward50=92,
+  AllianceNormalArmorReward53=93,
+  AllianceNormalArmorReward55=94,
+  CouponIssued=95,
+  PriceList2=96,
+  1FavorTalic=97,
+  3FavorTalic=98,
+  1KeenTalic=99,
+  3KeenTalic=100,
+  HallOfFame=101,
+  LookAround=102,
+  UnionForceShieldReward50=103,
+  UnionForceShieldReward53=104,
+  UnionForceShieldReward55=105,
+  AllianceForceShieldReward50=106,
+  AllianceForceShieldReward53=107,
+  AllianceForceShieldReward55=108,
+  EmpireForceShieldReward50=109,
+  EmpireForceShieldReward53=110,
+  EmpireForceShieldReward55=111,
+  Application=113,
+  AlliesWarriorReward57=114,
+  AlliesRangerReward57=115,
+  AlliesForceReward57=116,
+  AllianceWarriorReward57=117,
+  AllianceRangerReward57=118,
+  AllianceForceReward57=119,
+  EmpireWarriorReward57=120,
+  EmpireRangerReward57=121,
+  EmpireForceReward57=122,
+  AlliesWarriorReward60=123,
+  AlliesRangerReward60=124,
+  AlliesForceReward60=125,
+  AllianceWarriorReward60=126,
+  AllianceRangerReward60=127,
+  AllianceForceReward60=128,
+  EmpireWarriorReward60=129,
+  EmpireRangerReward60=130,
+  EmpireForceReward60=131,
+  AlliesWarriorReward63=132,
+  AlliesRangerReward63=133,
+  AlliesForceReward63=134,
+  AllianceWarriorReward63=135,
+  AllianceRangerReward63=136,
+  AllianceForceReward63=137,
+  EmpireWarriorReward63=138,
+  EmpireRangerReward63=139,
+  EmpireForceReward63=140,
+  AlliesWarriorReward65=141,
+  AlliesRangerReward65=142,
+  AlliesForceReward65=143,
+  AllianceWarriorReward65=144,
+  AllianceRangerReward65=145,
+  AllianceForceReward65=146,
+  EmpireWarriorReward65=147,
+  EmpireRangerReward65=148,
+  EmpireForceReward65=149,
+}
+
+enum OnOff
+{
+	Off=0,
+	On=1
+}
+
+enum StoreCode
+{
+  "None"=0,
+  Upper=1,
+  Lower=2,
+  Gloves=3,
+  Boots=4,
+  Helmet=5,
+  Weapon=6,
+  Shield=7,
+  Cloaks=8,
+  Ring=9,
+  Amulets=10,
+  Ammo=11,
+  MakeTool=12,
+  Potion=13,
+  Bag=14,
+  Battery=15,
+  Ore=16,
+  Resource=17,
+  Force=18,
+  UnitKey=19,
+  Booty=20,
+  Map=21,
+  Scrolls=22,
+  BattleDungeon=23,
+  Animus=24,
+  Towers=25,
+  Traps=26,
+  SeigeKits=27,
+  Ticket=28,
+  Event=29,
+  Recovery=30,
+  Box=31,
+  FireCracker=32,
+  UnMannedMiner=33,
+  Radar=34,
+  Pagers=35,
+  Coupons=36,
+  UnitHead=37,
+  UnitUpper=38,
+  UnitLower=39,
+  UnitArms=40,
+  UnitShoulder=41,
+  UnitBack=42,
+  UnitBullet=43
+}
+
+enum NameColor
+{
+  White=0,
+  Yellow=1,
+  Purple=2,
+  Orange=3,
+  Blue=4,
+  Pink=5,
+  LightBlue=6,
+  Green=7,
+  Green=8,
+  Cream=9,
+  White=45,
+  White=56,
+  White=255
+}
+
+enum ClassType
+{
+	Melee=0,
+	Range=1,
+	Force=2,
+	Spec=3
+}
+
+enum PTtype
+{
+  None=-1
+  Melee=0,
+  Range=1,
+  Race=2,
+  Force=3,
+  Shield=4,
+  None=255
+}
+
+enum PotType
+{
+	None=0,
+	HP=1,
+	FP=2,
+	SP=3,
+	Atk=4,
+	Def=5,
+	DoubleEff=9,
+	Cure=6,
+	Accuracy=7,
+	Chaos=8,
+	ChaosCure=9
+}
+
+enum OreType
+{
+	Blue=0,
+	Red=1,
+	Yellow=2,
+	Green=3,
+	Black=4,
+	Box=5
+}
+
+enum TalicType
+{
+	None=0,
+	Iggy=1,
+	Destruction=2,
+	Darkness=3,
+	Chaos=4,
+	Hatred=5,
+	Favor=6,
+	Wisdom=7,
+	Sacred=8,
+	Belief=9,
+	Guard=10,
+	Glory=11,
+	Grace=12,
+	Mercy=13,
+	Restoration=14
+}
+
+enum ResType
+{
+	Other=0,
+	Talic=1,
+	Ruby=2,
+	Crystal=3,
+	Topaz=4,
+	Obsidian=5
+}
+
+enum UseUpgrade
+{
+	Yes=1,
+	No=0
+}
+
+enum MoneyType
+{
+	Cash=0,
+	Gold=1,
+	Point=2,
+	Point=3,
+	GoldPoint=6
+}
+
+enum Tier
+{
+	Basic,
+	Expert,
+	Elite,
+	Master
+}
+
+enum SpellCode
+{
+	Dark=0,
+	Holy=1,
+	Fire=2,
+	Water=3,
+	Earth=4,
+	Wind=5
+}
+
+enum SkillCode
+{
+	Melee,
+	Range
+}
+
+enum SpellType
+{
+	Holy=113,
+	Dark=128,
+	Fire=146,
+	Aqua=147,
+	Terra=148,
+	Wind=149
+}
+
+enum Element
+{
+	None=-1
+	Fire
+	Water
+	Earth
+	Wind
+}
+
+enum MauType
+{
+	Goliath=0,
+	Catapult=1,
+	Nomad=2,
+	Engineer=3
+}
+enum SiegeType
+{
+	Launcher=0,
+	Flamer=1,
+	Faust=2
+}
+
+enum ResEff
+{
+	None=-1,
+	Lucky=0,
+	Promise=1,
+	ExpRate=2,
+	RaceChat=3,
+	Level=4,
+	ExpRate1=5,
+	PTRate=6,
+	Exp=7,
+	Exp=8,
+	Mining=9,
+	Promise=10,
+	Promise=11,
+	HPRecov=12,
+	HPReduce=15,
+	FPReduce=16,
+	SPDeduce=17,
+	ATK=18,
+	DEF=24,
+	Aggro=28,
+	MAUAtk=29,
+	AnimusAtk=33,
+	Speed=41,
+	Dodge=48,
+	ShieldBlock=78,
+	Drop=52,
+	PartyLevel=53,
+	ReflectDMG=54,
+	Exp=71,
+	Exp=72,
+	Drop=74,
+	Detect=76,
+	Debuff=77,
+	Atk=79,
+	Def=80,
+	MoneyDrop=81,
+	PTRate=82,
+	None=255
+}
+
+enum accEff
+{
+	None=0,
+	SP=1,
+	FPConsume=2,
+	Accuracy=3,
+	Dodge=4,
+	HPFP=5,
+	Atk=6,
+	Def=7,
+	LvlSkill=8,
+	Stealth=9,
+	Detect=10,
+	DmgProt=11,
+	Speed=12,
+	FPRecov=14,
+	Fatk=15,
+	FP=16,
+	Vamp=17,
+	fpVamp=18,
+	Crit=19,
+	Range=20,
+	Def=21,
+	DebuffTime=22,
+	HPRecov=23,
+	Dodge=24,
+	LauDelay=25,
+	ForceRange=26,
+	AntiCrit=27,
+	Protect=28,
+	Resist=29,
+	MaxHP=30,
+	DebuffTime=31,
+	IgShield=32,
+	SkillDelay=34
+	ForDelay=35
+}
+
+enum ClassEff
+{
+	None=-1,
+	None=0,
+	Atk=1,
+	Rez=2,
+	Dodge=3,
+	FAtk=4,
+	Stealth=5,
+	Defense=6,
+	"+FPCost"=7,
+	ForceRange=8,
+	AtkSpeed=9,
+	FP=10,
+	SkillCD=12,
+	ForceCD=13,
+	Crit=14,
+	Fire=15,
+	Water=16,
+	Earth=17,
+	Wind=18,
+	Tower=19,
+	Speed=20,
+	"MauAD/FakeDeath"=21
+	"Heal/FPtoHP"=22
+	TrapDetect=23,
+	SpReduce=24,
+	HPSuck=27,
+	Cleanse=28,
+	"Protect/Gate"=29,
+	BindPort=30,
+	Guage=31,
+	PlayerTaunt=32,
+	AnimusHeal=33,
+	AnimusRecall=34,
+	SelfDestruct=35,
+	Recall=36
+}
+
+enum AreaType
+{
+	NoTarget=-1,
+	Self=0,
+	Enemy=1,
+	SameRace=2,
+	Ground=3
+}
+
+enum PotEff
+{
+	None=-1,
+	Tranquility=0,
+	Entangle=1,
+	Dodge3=3,
+	Stealth=5,
+	Def5=6,
+	MaxHP1=9,
+	HPResPercent=10,
+	SkillDelay=12,
+	HPRes=14,
+	FPRes=15,
+	SPRes=16,
+	OpticPasly=18,
+	Speed=20,
+	TrapDetect=23,
+	Wolf=24,
+	Vamp1=27,
+	Purge=28,
+	Protect=29,
+	Escape=30,
+	DefGau=31,
+	Atk4=32,
+	Def4=33,
+	Mining2=34,
+	BlowUp=35,
+	DropRate=36,
+	HP3=37,
+	FP3=38,
+	SP3=39,
+	Accuracy1=40,
+	Chaos1=43,
+	ChaosCure1=44,
+	ClassRed=45,
+	Nuke=46,
+	NameCHG=47,
+	Summon1=48,
+	Tele1=49,
+	ExpPercent=50,
+	ExpNumber=51,
+	Revive1=52,
+	Potsx2x1=53,
+	Storage=54,
+	Stigma=55,
+	Scar=56,
+	GldCap=57,
+	MeleePt=58,
+	RangePt=59,
+	DefePt=60,
+	ForcePt=61,
+	ShieldPt=62,
+	RacePt=63,
+	AllPt=64
+}
+
+enum GemType
+{
+	None=0,
+	Ruby=1,
+	Crystal=2,
+	Topaz=4,
+	Obsidian=8
+}
+
+enum ToolType
+{
+	"Weapon/Shield"=0,
+	Armor=1,
+	Ammo=2,
+	Upgrader=3
+}
+
+enum AnimusType
+{
+	Paimon=1,
+	Hecate=2,
+	Inanna=3,
+	Isis=4
+}
+
+enum MonTarget
+{
+	Enemy=0
+	Self=1
+	Ally=2
+}
+
+enum MonSpell
+{
+	None=12589
+	Exertion=808464440
+	Sacrifice=825241656
+	Rush=842018872
+	Might=858796088
+	BroadOutlook=875573304
+	DarkSpeed=892350520
+	Actue=909127736
+	HellBless=925904952
+	DarkEfficiency=942682168
+	Absorb=959459384
+	Transparency=1093677112
+	Resurrect=1110454328
+	Bless=808464695
+	Restoration=825241911
+	SoulBallad=842019127
+	EleShield=858796343
+	Heal=875573559
+	HolySpeed=892350775
+	Agility=909127991
+	HolyShield=925905207
+	HolyEfficiency=942682423
+	BloodCapture=959459639
+	AbsoluteArmor=1093677367
+	Remedy=1110454583
+	PrismBeam=808464953
+	Pentacle=825242169
+	FireBall=842019385
+	FlashBeam=858796601
+	FlameArrow=875573817
+	CircleOfFire=892351033
+	Inferno=909128249
+	Swarm=925905465
+	BlazePearl=942682681
+	SolarBlade=959459897
+	BlazingLance=1093677625
+	Meteor=1110454841
+	Solaris=1127232057
+	HellSoul=1144009273
+	HellFlight=1160786489
+	Corona=1177563705
+	IceShard=808465209
+	MistShot=825242425
+	BlindSight=842019641
+	Weakness=858796857
+	FrostArror=875574073
+	AquaBlade=892351289
+	EleBurn=909128505
+	PowerDrain=925905721
+	WaveRage=942682937
+	FrostNova=959460153
+	Confuse=1093677881
+	Sloth=1110455097
+	Aquifier=1127232313
+	SnowDrift=1144009529
+	Counteraction=1160786745
+	Confine=1177563961
+	VainBreak=808465465
+	Fetor=825242681
+	SoulBlind=842019897
+	SoulMute=858797113
+	TectonicMight=875574329
+	ToxicBane=892351545
+	Desolate=909128761
+	Ensnare=925905977
+	VenomBreath=942683193
+	SandStorm=959460409
+	Entangle=1093678137
+	Tranquility=1110455353
+	ViralBreak=1127232569
+	RockStorm=1144009785
+	Bleeder=1160787001
+	Imobility=1177564217
+	EnergyBall=808465721
+	WhirlWind=825242937
+	SkillThaw=842020153
+	ForceExtract=858797369
+	ElectricBall=875574585
+	AirBlast=892351801
+	Purge=909129017
+	Revealer=925906233
+	BlastShot=942683449
+	LightningChain=959460665
+	SkillRevoker=1093678393
+	ForceRevoker=1110455609
+	GravityField=1127232825
+	Melatha=1144010041
+	Eraser=1160787257
+	Vigilance=1177564473
+	
+}
+
+enum MainEff
+{
+	HP
+	FP
+	SP
+	Cure
+	ATK
+	2Eff
+	3Eff
+	4Eff
+	NukeClean=14
+	NameChange=15
+	Summon=16
+	Teleport=17
+	Exp=18
+	Runes=19
+}

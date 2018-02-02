@@ -1,0 +1,176 @@
+// Created  @ Hanry Roslaw Saputra
+// Offset	@ TriRozhka
+// Strs RF_Online.bin Russian Version
+
+[filemask="RF_Online.bin"]
+
+struct RFOnlineBinRU
+	{
+	child "LimitLevel1"  [group="Mastery Limit",    offset=(0x01a904d),    count=1];
+	child "LimitLevel2"  [group="Mastery Limit",    offset=(0x01a90a6),    count=1];
+	child "LimitLevel3"  [group="Mastery Limit",    offset=(0x01a90c0),    count=1];
+	child "LimitLevel4"  [group="Mastery Limit",    offset=(0x01a910a),    count=1];
+	child "LimitLevel5"  [group="Mastery Limit",    offset=(0x01a9156),    count=1];
+	child "LimitLevel6"  [group="Mastery Limit",    offset=(0x01a9170),    count=1];
+	child "LimitLevel7"  [group="Mastery Limit",    offset=(0x01a972f),    count=1];
+	child "Race1"  [group="ClassJob Limit",    offset=(0x0d97d2),    count=1];
+	child "Race2"  [group="ClassJob Limit",    offset=(0x015d1ea),    count=1];
+	child "Race3"  [group="ClassJob Limit",    offset=(0x015d269),    count=1];
+	child "SkillExpert"  [offset=(0x018ac1),    count=1];
+	child "SkillElite"  [offset=(0x18a92),    count=1];
+	child "AnimusDeffLevel"  [group="Animus Limit",    offset=(0x018d47),    count=1];
+	child "RecruitLimit"  [group="Animus Limit",    offset=(0x04af7a),    count=1];
+	child "VeteranLimit"  [group="Animus Limit",    offset=(0x04af89),    count=1];
+	child "MasterLimit"  [group="Animus Limit",    offset=(0x04af98),    count=1];
+	child "RecallLimit"  [group="Animus Limit",    offset=(0x2f6957),    count=1];
+	child "MoveUnitType7"  [offset=(0x057726),    count=1];
+	child "EffectShakeUnit"  [offset=(0x323c9e),    count=1];
+	child "Mail1"  [group="Cost Limit",    offset=(0x2cb0c5),    count=1];
+	child "Mail2"  [group="Cost Limit",    offset=(0x2cb0c9),    count=1];
+	child "Mail3"  [group="Cost Limit",    offset=(0x2cb13a),    count=1];
+	child "Mail4"  [group="Cost Limit",    offset=(0x2cb17b),    count=1];
+	child "StorageOMB"  [group="Cost Limit",    offset=(0x051a92),    count=1];
+	child "RegistArchon"  [group="Cost Limit",    offset=(0x0e4dd3),    count=1];
+	child "CreateBank1"  [group="Cost Limit",    offset=(0x07269f),    count=1];
+	child "CreateBank2"  [group="Cost Limit",    offset=(0x0726a6),    count=1];
+	child "CreateBank3"  [group="Cost Limit",    offset=(0x0726ad),    count=1];
+	child "ExpandBank1"  [group="Cost Limit",    offset=(0x072bcd),    count=1];
+	child "ExpandBank2"  [group="Cost Limit",    offset=(0x072bd4),    count=1];
+	child "ExpandBank3"  [group="Cost Limit",    offset=(0x072bdb),    count=1];
+	child "LimitMoney1"  [group="Cost Limit",    offset=(0x2212e8),    count=1];
+	child "LimitMoney2"  [group="Cost Limit",    offset=(0x221418),    count=1];
+	child "LimitMoney3"  [group="Cost Limit",    offset=(0x253917),    count=1];
+	child "LimitMoney4"  [group="Cost Limit",    offset=(0x259c3b),    count=1];
+	child "LootDelay"  [offset=(0x13f7ef),    count=1];
+	child "TotalMap"  [offset=(0x2fa5ae),    count=1];
+	child "DisablePopUp"  [offset=(0x1f6a7c),    count=1];
+	child "Ball1"  [offset=(0x01e8fe),    count=1];
+	child "Ball2"  [offset=(0x637d2),    count=1];
+	child "Ball3"  [offset=(0x065038),    count=1];
+	child "ChipStatus"  [offset=(0x144f8e),    count=1];
+	child "TemporaryObject"  [offset=(0x55030),    count=1];
+	child "DisableFrostGuard"  [offset=(0x3abb1d),    count=1];
+	child "FixingRUtoUSA"  [offset=(0x1a2282),    count=1];
+	child "DefaultTmp"  [offset=(0x667E74),    count=1];
+	child "Mp3File"  [offset=(0x649B08),    count=1];
+	child "AviFile1"  [offset=(0x64A9B4),    count=1];
+	child "AviFile2"  [offset=(0x64AA7C),    count=1];
+	child "VersionKey"  [offset=(0x64D0F0),    count=1];
+	child "DualLogin1"  [group="Dual Login",    offset=(0x2FE1D2),    count=1];
+	child "DualLogin2"  [group="Dual Login",    offset=(0x2FE163),    count=1];
+	}
+
+struct "LimitLevel1" [preload=1, tableview=1]{
+    u8 [tag="Change to MaxLevel"];}
+struct "LimitLevel2" [preload=1, tableview=1]{
+    u8 [tag="Change to MaxLevel"];}
+struct "LimitLevel3" [preload=1, tableview=1]{
+    u8 [tag="Change to MaxLevel"];}
+struct "LimitLevel4" [preload=1, tableview=1]{
+    u8 [tag="Change to MaxLevel"];}
+struct "LimitLevel5" [preload=1, tableview=1]{
+    u8 [tag="Change to MaxLevel"];}
+struct "LimitLevel6" [preload=1, tableview=1]{
+    u8 [tag="Change to MaxLevel"];}
+struct "LimitLevel7" [preload=1, tableview=1]{
+    u8 [tag="Change to MaxLevel"];}
+	
+struct "Race1" [preload=1, tableview=1]{
+    u8 [tag="2nd Class = 2 - 3rd Class = 3"];}
+struct "Race2" [preload=1, tableview=1]{
+    u8 [tag="2nd Class = 2 - 3rd Class = 3"];}
+struct "Race3" [preload=1, tableview=1]{
+    u8 [tag="2nd Class = 2 - 3rd Class = 3"];}
+
+struct "SkillExpert" [preload=1, tableview=1]{
+    x8 [tag="Change 7c or 75"];}
+struct "SkillElite" [preload=1, tableview=1]{
+    x16 [tag="Change 7501 or 7702"];}
+
+struct "AnimusDeffLevel" [preload=1, tableview=1]{
+    u8 [tag="Change Different Level"];}
+struct "RecruitLimit" [preload=1, tableview=1]{
+    u8 [tag="Lv 1 - Lv 19"];}
+struct "VeteranLimit" [preload=1, tableview=1]{
+    u8 [tag="Lv 20 - Lv 39"];}
+struct "MasterLimit" [preload=1, tableview=1]{
+    u8 [tag="Lv 40 - Lv 49"];}
+struct "RecallLimit" [preload=1, tableview=1]{
+    u8 [tag="Recall.ini Effect"];}
+
+struct "MoveUnitType7" [preload=1, tableview=1]{
+    x8 [tag="Change 74 to EB"];}	
+struct "EffectShakeUnit" [preload=1, tableview=1]{
+    x32 [tag="Change 0312850F to 90909090"];}
+
+struct "Mail1" [preload=1, tableview=1]{
+    u8 [tag="Cost Send Mail"];}
+struct "Mail2" [preload=1, tableview=1]{
+    u8 [tag="Cost Send Mail"];}	
+struct "Mail3" [preload=1, tableview=1]{
+    u8 [tag="Cost Send Mail"];}
+struct "Mail4" [preload=1, tableview=1]{
+    u8 [tag="Cost Send Mail"];}	
+struct "StorageOMB" [preload=1, tableview=1]{
+    u32 [tag="Cost StorageOMB"];}	
+struct "RegistArchon" [preload=1, tableview=1]{
+    u32 [tag="Cost Regist Archon"];}	
+struct "CreateBank1" [preload=1, tableview=1]{
+    u32 [tag="Cost Create Bank"];}
+struct "CreateBank2" [preload=1, tableview=1]{
+    u32 [tag="Cost Create Bank"];}	
+struct "CreateBank3" [preload=1, tableview=1]{
+    u32 [tag="Cost Create Bank"];}	
+struct "ExpandBank1" [preload=1, tableview=1]{
+    u32 [tag="Cost Expand Bank"];}	
+struct "ExpandBank2" [preload=1, tableview=1]{
+    u32 [tag="Cost Expand Bank"];}	
+struct "ExpandBank3" [preload=1, tableview=1]{
+    u32 [tag="Cost Expand Bank"];}	
+struct "LimitMoney1" [preload=1, tableview=1]{
+    u32 [tag="Limit Money"];}	
+struct "LimitMoney2" [preload=1, tableview=1]{
+    u32 [tag="Limit Money"];}	
+struct "LimitMoney3" [preload=1, tableview=1]{
+    u32 [tag="Limit Money"];}	
+struct "LimitMoney4" [preload=1, tableview=1]{
+    u32 [tag="Limit Money"];}	
+
+struct "LootDelay" [preload=1, tableview=1]{
+    u32 [tag="Looting Time Delay"];}
+struct "TotalMap" [preload=1, tableview=1]{
+    u8 [tag="Total Map Client"];}
+struct "DisablePopUp" [preload=1, tableview=1]{
+    x16 [tag="Change 0575 to 9090"];}
+struct "Ball1" [preload=1, tableview=1]{
+    x8 [tag="Change 82 to 85"];}
+struct "Ball2" [preload=1, tableview=1]{
+    x8 [tag="Change 72 to 75"];}
+struct "Ball3" [preload=1, tableview=1]{
+    x8 [tag="Change 72 to 75"];}
+struct "ChipStatus" [preload=1, tableview=1]{
+    x8 [tag="Change 75 to EB"];}
+struct "TemporaryObject" [preload=1, tableview=1]{
+    x8 [tag="Change 74 to EB"];}
+struct "DisableFrostGuard" [preload=1, tableview=1]{
+    x8 [tag="Change 74 to EB"];}
+struct "FixingRUtoUSA" [preload=1, tableview=1]{
+    x32 [tag="Change 04e4 to 04e3"];}
+struct "DefaultTmp" [preload=1, tableview=1]{
+    cstr [len=24, tag="Tmp File"];}
+struct "Mp3File" [preload=1, tableview=1]{
+    cstr [len=20, tag="MP3 File"];}
+struct "AviFile1" [preload=1, tableview=1]{
+    cstr [len=24, tag="AVI File"];}
+struct "AviFile2" [preload=1, tableview=1]{
+    cstr [len=24, tag="AVI File"];}
+struct "VersionKey" [preload=1, tableview=1]{
+    cstr [len=33, tag="Versin CheckKey"];}
+
+struct "DualLogin1" [preload=1, tableview=1]{
+    x8 [tag="Change to 85"];}
+struct "DualLogin2" [preload=1, tableview=1]{
+    i8 [tag="Change to 100"];}	
+	
+	
+	

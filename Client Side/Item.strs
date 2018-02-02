@@ -1,0 +1,1502 @@
+[filemask="Item.dat"]
+
+
+struct ItemFile
+{
+seek(10);
+u32 q1bb;
+u32 q1c;
+seek(20+8+q1bb*q1c);
+child Face [group="Face", offset=(10+8),count=q1bb];
+u32 q2bb;
+u32 q2c;
+seek(16+q2bb*q2c+q1bb*q1c+30);
+child Armor [group="Upper", offset=(20+8+8+q1bb*q1c),count=q2bb];
+u32 q3bb;
+u32 q3c;
+seek(24+q3bb*q3c+q2bb*q2c+q1bb*q1c+40);
+child Armor [group="Lower", offset=(30+8+16+q2bb*q2c+q1bb*q1c),count=q3bb];
+u32 q4bb;
+u32 q4c;
+seek(32+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c+50);
+child Armor [group="Gloves", offset=(40+8+24+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q4bb];
+u32 q5bb;
+u32 q5c;
+seek(40+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c+60);
+child Armor [group="Boots", offset=(50+8+32+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q5bb];
+u32 q6bb;
+u32 q6c;
+seek(70+48+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Armor [group="Helmet", offset=(60+8+40+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q6bb];
+u32 q7bb;
+u32 q7c;
+seek(80+56+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Weapon [group="Weapon", offset=(70+8+48+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q7bb];
+u32 q8bb;
+u32 q8c;
+seek(90+64+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Armor [group="Shields", offset=(80+8+56+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q8bb];
+u32 q9bb;
+u32 q9c;
+seek(100+72+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Cloak [group="Cloak", offset=(90+8+64+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q9bb];
+u32 q10bb;
+u32 q10c;
+seek(110+80+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Jewelry [group="Ring", offset=(100+8+72+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q10bb];
+u32 q11bb;
+u32 q11c;
+seek(120+88+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Jewelry [group="Amulet", offset=(110+8+80+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q11bb];
+u32 q12bb;
+u32 q12c;
+seek(130+96+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Ammo [group="Ammo", offset=(120+8+88+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q12bb];
+u32 q13bb;
+u32 q13c;
+seek(140+104+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Tools [group="Tools", offset=(130+8+96+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q13bb];
+u32 q14bb;
+u32 q14c;
+seek(150+112+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Etc [group="Potion", offset=(140+8+104+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q14bb];
+u32 q15bb;
+u32 q15c;
+seek(160+120+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Tools [group="Bag", offset=(150+8+112+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q15bb];
+u32 q16bb;
+u32 q16c;
+seek(170+128+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Mining [group="Mining", offset=(160+8+120+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q16bb];
+u32 q17bb;
+u32 q17c;
+seek(180+136+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Ore [group="Ore", offset=(170+8+128+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q17bb];
+u32 q18bb;
+u32 q18c;
+seek(190+144+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Resourse [group="Resourse", offset=(180+8+136+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q18bb];
+u32 q19bb;
+u32 q19c;
+seek(200+152+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Force [group="Force", offset=(190+8+144+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q19bb];
+u32 q20bb;
+u32 q20c;
+seek(210+160+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Mau [group="MAU", offset=(200+8+152+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q20bb];
+u32 q21bb;
+u32 q21c;
+seek(220+168+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Booty [group="Booty", offset=(210+8+160+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q21bb];
+u32 q22bb;
+u32 q22c;
+seek(230+176+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Tcard [group="Map", offset=(220+8+168+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q22bb];
+u32 q23bb;
+u32 q23c;
+seek(240+184+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child TcardDesc [group="TcardDesc", offset=(230+8+176+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q23bb];
+u32 q24bb;
+u32 q24c;
+seek(250+192+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Dangeon [group="Dangeon", offset=(240+8+184+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q24bb];
+u32 q25bb;
+u32 q25c;
+seek(260+200+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Animus [group="Animus", offset=(250+8+192+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q25bb];
+u32 q26bb;
+u32 q26c;
+seek(270+208+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Tower [group="Tower", offset=(260+8+200+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q26bb];
+u32 q27bb;
+u32 q27c;
+seek(280+216+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Trap [group="Trap", offset=(270+8+208+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q27bb];
+u32 q28bb;
+u32 q28c;
+seek(290+224+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Siege [group="Siege Kit", offset=(280+8+216+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q28bb];
+u32 q29bb;
+u32 q29c;
+seek(300+232+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Ticket [group="Ticket", offset=(290+8+224+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q29bb];
+u32 q30bb;
+u32 q30c;
+seek(310+240+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Etc2 [group="Etc", offset=(300+8+232+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q30bb];
+
+
+
+u32 q31bb;
+u32 q31c;
+seek(320+248+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Recovery [group="Recovery", offset=(310+248+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q31bb];
+u32 q32bb;
+u32 q32c;
+seek(330+256+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child Box [group="Box", offset=(320+256+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q32bb];
+u32 q33bb;
+u32 q33c;
+seek(340+264+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child q33a [group="FireCracker", offset=(330+264+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q33bb];
+u32 q34bb;
+u32 q34c;
+seek(350+272+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child q34a [group="Cash Mining", offset=(340+272+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q34bb];
+u32 q35bb;
+u32 q35c;
+seek(360+280+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child q35a [group="Radar", offset=(350+280+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q35bb];
+u32 q36bb;
+u32 q36c;
+seek(370+288+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child q36a [group="Pager", offset=(360+288+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q36bb];
+u32 q37bb;
+u32 q37c;
+seek(380+296+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child q37a [group="Coupon", offset=(370+296+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q37bb];
+u32 q38bb;
+u32 q38c;
+seek(390+304+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child MauArmor [group="MauHead", offset=(380+304+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q38bb];
+u32 q39bb;
+u32 q39c;
+seek(400+312+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child MauArmor [group="MauUpper", offset=(390+312+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q39bb];
+u32 q40bb;
+u32 q40c;
+seek(410+320+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child MauArmor [group="MauLower", offset=(400+320+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q40bb];
+u32 q41bb;
+u32 q41c;
+seek(420+328+q41bb*q41c+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child MauWeapon [group="MauArms", offset=(410+328+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q41bb];
+u32 q42bb;
+u32 q42c;
+seek(430+336+q42bb*q42c+q41bb*q41c+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child MauWeapon [group="MauShoulder", offset=(420+336+q41bb*q41c+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q42bb];
+u32 q43bb;
+u32 q43c;
+seek(440+344+q43bb*q43c+q42bb*q42c+q41bb*q41c+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child MauBack [group="MauBack", offset=(430+344+q42bb*q42c+q41bb*q41c+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q43bb];
+u32 q44bb;
+u32 q44c;
+seek(450+352+q44bb*q44c+q43bb*q43c+q42bb*q42c+q41bb*q41c+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child MauBullets [group="MauBullets", offset=(440+352+q43bb*q43c+q42bb*q42c+q41bb*q41c+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q44bb];
+u32 q45bb;
+u32 q45c;
+seek(460+360+q45bb*q45c+q44bb*q44c+q43bb*q43c+q42bb*q42c+q41bb*q41c+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child q45a [group="q45a", offset=(450+360+q44bb*q44c+q43bb*q43c+q42bb*q42c+q41bb*q41c+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q45bb];
+u32 q46bb;
+u32 q46c;
+seek(470+368+q46bb*q46c+q45bb*q45c+q44bb*q44c+q43bb*q43c+q42bb*q42c+q41bb*q41c+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child q46a [group="q46a", offset=(460+368+q45bb*q45c+q44bb*q44c+q43bb*q43c+q42bb*q42c+q41bb*q41c+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q46bb];
+u32 q47bb;
+u32 q47c;
+seek(480+376+q47bb*q47c+q46bb*q46c+q45bb*q45c+q44bb*q44c+q43bb*q43c+q42bb*q42c+q41bb*q41c+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child q47a [group="q47a", offset=(470+376+q46bb*q46c+q45bb*q45c+q44bb*q44c+q43bb*q43c+q42bb*q42c+q41bb*q41c+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q47bb];
+u32 q48bb;
+u32 q48c;
+seek(490+384+q48bb*q48c+q47bb*q47c+q46bb*q46c+q45bb*q45c+q44bb*q44c+q43bb*q43c+q42bb*q42c+q41bb*q41c+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c);
+child q48a [group="q48a", offset=(480+384+q47bb*q47c+q46bb*q46c+q45bb*q45c+q44bb*q44c+q43bb*q43c+q42bb*q42c+q41bb*q41c+q40bb*q40c+q39bb*q39c+q38bb*q38c+q37bb*q37c+q36bb*q36c+q35bb*q35c+q34bb*q34c+q33bb*q33c+q32bb*q32c+q31bb*q31c+q30bb*q30c+q29bb*q29c+q28bb*q28c+q27bb*q27c+q26bb*q26c+q25bb*q25c+q24bb*q24c+q23bb*q23c+q22bb*q22c+q21bb*q21c+q20bb*q20c+q19bb*q19c+q18bb*q18c+q17bb*q17c+q16bb*q16c+q15bb*q15c+q14bb*q14c+q13bb*q13c+q12bb*q12c+q11bb*q11c+q10bb*q10c+q9bb*q9c+q8bb*q8c+q7bb*q7c+q6bb*q6c+q5bb*q5c+q4bb*q4c+q3bb*q3c+q2bb*q2c+q1bb*q1c),count=q48bb];
+u32 q49bb;
+u32 q49c;
+
+
+}
+
+struct Face [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+
+}
+
+struct Armor [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="1"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="nax"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="nax"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u8 [tag="Num of abilities"];
+u8 [tag="Ability 1"];
+u8 [tag="Ability 2"];
+u8 [tag="Ability 3"];
+u8 [tag="Ability 4"];
+cstr [len=3];
+float [tag="Ability Value"] DWORD;
+float [tag="Ability Value"] DWORD;
+float [tag="Ability Value"] DWORD;
+float [tag="Ability Value"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+i16 [tag="Resist 1"];
+i16 [tag="Resist 2"];
+i16 [tag="Resist 3"];
+i16 [tag="Resist 4"];
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Weapon [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="1"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="nax"] DWORD;
+x32 [tag="nax"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u8 Lv;
+u8 Type;
+u8 ;
+u8 PT;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u8 Num_Of_Abilities;
+u8 Ab1;
+u8 Ab2;
+u8 Ab3;
+u32 Ab4;
+float [tag="Vaue 1"] DWORD;
+float [tag="Vaue 2"] DWORD;
+float [tag="Vaue 3"] DWORD;
+float [tag="Vaue 4"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Min attack"] DWORD;
+u32 [tag="Max attack"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Cloak [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="1"] nax;
+x32 [tag="1"] nax;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Jewelry [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="1"] nax;
+x32 [tag="1"] nax;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u8;
+u8;
+u8;
+u8;
+u32 [tag="-----"] DWORD;
+u8 [tag="kol-vo Eff"] DWORD;
+u8 [tag="1 eff"] DWORD;
+u8 [tag="2 eff"] DWORD;
+u8 [tag="3 eff"] DWORD;
+u8 [tag="4 eff"] DWORD;
+u8 [tag="5 eff"] DWORD;
+u8 [tag="6 eff"] DWORD;
+u8 [tag="-----"] DWORD;
+float [tag="Power1"] DWORD;
+float [tag="Power2"] DWORD;
+float [tag="Power3"] DWORD;
+float [tag="Power4"] DWORD;
+float [tag="Power5"] DWORD;
+float [tag="Power6"] DWORD;
+u8 [tag="Fire"] DWORD;
+u8 [tag="---"] DWORD;
+u8 [tag="Water"] DWORD;
+u8 [tag="---"] DWORD;
+u8 [tag="Earth eff"] DWORD;
+u8 [tag="----"] DWORD;
+u8 [tag="Wind eff"] DWORD;
+u8 [tag="----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Ammo [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="1"] nax;
+x32 [tag="1"] nax;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Tools [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="1"] nax;
+x32 [tag="1"] nax;
+x32 [tag="1"] nax;
+x32 [tag="1"] nax;
+}
+
+struct Etc [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop / 5.5"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="-----"] DWORD;
+x32 [tag="1"] nax;
+u32 [tag="1"] nax;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Mining [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="-----"] DWORD;
+x32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Ore [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="-----"] DWORD;
+x32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Resourse [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="nax"] DWORD;
+x32 [tag="nax"] DWORD;
+u32 [tag="-----"] DWORD;
+repeat 5
+{
+u32 [tag="Абилка"] DWORD;
+float [tag="количество 1"] DWORD;
+float [tag="количество 2"] DWORD;
+}
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="-----"] DWORD;
+x32 [tag="-----"] DWORD;
+x32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Force [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Mau [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Booty [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+x32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="-----"] DWORD;
+x32 [tag="-----"] DWORD;
+x32 [tag="-----"] DWORD;
+x32 [tag="-----"] DWORD;
+}
+
+struct Tcard [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+cstr [len=36] TPDest;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct TcardDesc [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+cstr [len=32] TPDest;
+cstr [len=32] TPDest;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Dangeon [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Animus [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Tower [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="nax"] DWORD;
+x32 [tag="nax"] DWORD;
+u32 [tag="1"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="1"] DWORD;
+u32 [tag="-----"] DWORD;
+u8 "Кол предметов";
+u8 "Тип предмета 1";
+u8 "Тип предмета 2";
+u8 "Тип предмета 3";
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="Item 1"] DWORD;
+x32 [tag="Item 2"] DWORD;
+x32 [tag="Item 3"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Num 1"] DWORD;
+u32 [tag="Num 2"] DWORD;
+u32 [tag="Num 3"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Trap [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+x32 [tag="nax"] DWORD;
+x32 [tag="nax"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Siege [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u8;
+u8;
+u8;
+u8;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Ticket [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+cstr [len=33] lable;
+cstr [len=39] lable;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Etc2 [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Recovery [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+struct Box [preload=1]
+{
+u32 nCount;
+x32 [tag="ID"] DWORD;
+cstr [len=64] ItemName;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="Cost in shop"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="nax"] DWORD;
+x32 [tag="nax"] DWORD;
+x32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="1"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+u32 [tag="-----"] DWORD;
+}
+
+
+
+struct q33a [preload=1]
+{ 
+u32 Count;
+x32 Code;
+str [len=64] Name;
+str [len=328];
+} 
+
+struct q34a [preload=1]
+{ 
+u32 Count;
+x32 Code;
+str [len=64] Name;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32 1;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32 2;
+x32 nax;
+x32 nax;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+} 
+
+struct q35a [preload=1]
+{ 
+u32 Count;
+x32 Code;
+str [len=64] Name;
+str [len=112];
+} 
+
+struct q36a [preload=1]
+{ 
+u32 Count;
+x32 Code;
+str [len=64] Name;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32 1;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+x32 nax;
+x32 nax;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+} 
+
+struct q37a [preload=1]
+{ 
+u32 Count;
+x32 Code;
+str [len=64] Name;
+str [len=84];
+u32 Count;
+} 
+
+struct MauArmor [preload=1]
+{ 
+u32 Count;
+x32 Code;
+str [len=64] Name;
+x32 Texture;
+u32 Icon;
+x32 Race;
+x32 Race2;
+u32;
+u32 Price;
+repeat 12
+{
+u32;
+}
+u32 Def;
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+u8 Accuracy;
+u8;
+u8;
+u8;
+u8;
+u8;
+u8;
+u8;
+repeat 5
+{
+u32;
+u32;
+u32;
+u32;
+u32;
+u32;
+}
+u8 Lvl;
+u8 PtType;
+u8;
+u8 PT;
+repeat 5
+{
+}
+} 
+
+struct MauWeapon [preload=1]
+{ 
+u32 Count;
+x32 Code;
+str [len=64] Name;
+x32 Texture;
+u32 Icon;
+repeat 25
+{
+u32;
+}
+u8 Lvl;
+u8 PtType;
+u8;
+u8 PT;
+repeat 13
+{
+u32;
+u32;
+u32;
+u32;
+u32;
+}
+
+} 
+
+
+struct MauBack[preload=1]
+{ 
+u32 Count;
+x32 Code;
+str [len=64] Name;
+x32 Texture;
+u32 Icon;
+repeat 25
+{
+u32;
+}
+u8 Lvl;
+u8 PtType;
+u8;
+u8 PT;
+
+repeat 7
+{
+u32;
+}
+} 
+
+struct MauBullets[preload=1]
+{ 
+u32 Count;
+x32 Code;
+str [len=64] Name;
+x32 Texture;
+u32 Icon;
+
+repeat 35
+{
+u32;
+}
+} 
+
+struct q45a [preload=1]
+{ 
+u32;
+} 
+
+struct q46a [preload=1]
+{ 
+u32;
+} 
+
+struct q47a [preload=1]
+{ 
+u32;
+} 
+
+struct q48a [preload=1]
+{ 
+u32;
+}

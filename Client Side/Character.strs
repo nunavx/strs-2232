@@ -1,0 +1,292 @@
+// Rebuild by Nuna
+
+[filemask="Character.dat"]
+
+
+struct CharacterFile
+{
+u32 ClassBlocks;
+u32 ClassColumns;
+seek (ClassBlocks*ClassColumns+8);
+u32 RankBlocks;
+u32 RankColumns;
+seek (ClassBlocks*ClassColumns+RankBlocks*RankColumns+16);
+u32 MobBlocks;
+u32 MobColumns;
+seek (ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+24);
+u32 EmoticonBlocks;
+u32 EmoticonColumns;
+seek (ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+32);
+u32 PTBlocks;
+u32 PTColumns;
+seek (ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+PTBlocks*PTColumns+40);
+u32 PlayerEXPBlocks;
+u32 PlayerEXPColumns;
+seek (ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+PTBlocks*PTColumns+PlayerEXPBlocks*PlayerEXPColumns+48);
+u32 AnimusBlocks;
+u32 AnimusColumns;
+child Class 	[group="Class", 				offset=8, count=ClassBlocks];
+child Rank 		[group="Rank", 					offset=(ClassBlocks*ClassColumns+16), count=RankBlocks];
+child Mob 		[group="Monsters", 				offset=(ClassBlocks*ClassColumns+RankBlocks*RankColumns+24), count=MobBlocks];
+child Emoticon	[group="Emoticon", 				offset=(ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+32), count=EmoticonBlocks];
+child PT 		[group="Warrior PT", 			offset=(ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+40), count=PTBlocks/4];
+child PT 		[group="Ranger PT",				offset=(ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+40+PTBlocks*PTColumns/4), 	count=PTBlocks/4];
+child PT 		[group="Race Special PT",		offset=(ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+40+PTBlocks*PTColumns/2), 	count=PTBlocks/4];
+child PT 		[group="Specialist PT",			offset=(ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+40+PTBlocks*PTColumns*3/4), 	count=PTBlocks/4];
+child PlayerEXP [group="Player Experience", 	offset=(ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+PTBlocks*PTColumns+48), 	count=PlayerEXPBlocks];
+child Animus 	[group="Paimon Animus", 		offset=(ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+PTBlocks*PTColumns+PlayerEXPBlocks*PlayerEXPColumns+56),	count=AnimusBlocks/8];
+child Animus 	[group="Hecate Animus", 		offset=(ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+PTBlocks*PTColumns+PlayerEXPBlocks*PlayerEXPColumns+56+AnimusBlocks*AnimusColumns/8), 	count=AnimusBlocks/8];
+child Animus 	[group="Inana Animus", 			offset=(ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+PTBlocks*PTColumns+PlayerEXPBlocks*PlayerEXPColumns+56+AnimusBlocks*AnimusColumns/4), 	count=AnimusBlocks/8];
+child Animus 	[group="Isis Animus", 			offset=(ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+PTBlocks*PTColumns+PlayerEXPBlocks*PlayerEXPColumns+56+AnimusBlocks*AnimusColumns*3/8), count=AnimusBlocks/8];
+child Animus 	[group="Sealed Paimon Animus", 	offset=(ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+PTBlocks*PTColumns+PlayerEXPBlocks*PlayerEXPColumns+56+AnimusBlocks*AnimusColumns/2), 	count=AnimusBlocks/8];
+child Animus 	[group="Sealed Hecate Animus", 	offset=(ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+PTBlocks*PTColumns+PlayerEXPBlocks*PlayerEXPColumns+56+AnimusBlocks*AnimusColumns*5/8), count=AnimusBlocks/8];
+child Animus 	[group="Sealed Inana Animus", 	offset=(ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+PTBlocks*PTColumns+PlayerEXPBlocks*PlayerEXPColumns+56+AnimusBlocks*AnimusColumns*3/4), count=AnimusBlocks/8];
+child Animus 	[group="Sealed Isis Animus", 	offset=(ClassBlocks*ClassColumns+RankBlocks*RankColumns+MobBlocks*MobColumns+EmoticonBlocks*EmoticonColumns+PTBlocks*PTColumns+PlayerEXPBlocks*PlayerEXPColumns+56+AnimusBlocks*AnimusColumns*7/8), count=AnimusBlocks/8];
+
+}
+
+struct Class [preload=1]
+{
+u8 "Class";
+u8 "#  Specializations";
+u16 "empty"[hidden];
+u32 "Number";
+x32 "ID Specialist";
+cstr [len=32] "Speciality";
+repeat 8
+{
+x32 "ID Specialist";
+}
+u32 "Sprite";
+cstr [len=32] "Class Name";
+cstr [len=32, id=RusName] "RusName";
+cstr [len=32, id=EngName] "EngName";
+nodename (": "+RusName+" | "+EngName);
+u32 "Race (0=B, 1=C, 2=A)";
+repeat 10
+{
+x32 "Skill\buff";
+}
+u32 "Max instllaed traps";
+i32 "Bonus НР";
+i32 "Bonus FР";
+i32 "Bonus SР";
+u32 "Bonus PT BB";
+u32 "Bonus PT JB";
+u32 "Bonus PT Special Skill";
+u32 "Bonus PT Magic";
+u32 "Bonus PT Shield";
+u32 "Bonus PT Def";
+u32 "Bonus PT Building weapons and shields";
+u32 "Bonus PT Building Armor";
+u32 "Bonus PT Building Ammunitions";
+u32 "Bonus Basic Shadow";
+u32 "Bonus Expert Shadow";
+u32 "Bonus Elite Shadow";
+u32 "Bonus Master Shadow";
+u32 "Bonus Basic  magic light";
+u32 "Bonus Expert  magic light";
+u32 "Bonus Elite magic light";
+u32 "Bonus Master  magic light";
+u32 "Bonus Basic  magic fire";
+u32 "Bonus Expert  magic fire";
+u32 "Bonus Elite magic fire";
+u32 "Bonus Master  magic fire";
+u32 "Bonus Basic  magic water";
+u32 "Bonus Expert  magic water";
+u32 "Bonus Elite magic water";
+u32 "Bonus Master  magic water";
+u32 "Bonus Basic  magic earth";
+u32 "Bonus Expert  magic earth";
+u32 "Bonus Elite magic earth";
+u32 "Bonus Master  magic earth";
+u32 "Bonus Basic  magic wind";
+u32 "Bonus Expert  magic wind";
+u32 "Bonus Elite magic wind";
+u32 "Bonus Master  magic wind";
+u32 [tag="UBB - Basic"];
+u32 [tag="UBB - Expert"];
+u32 [tag="UBB - Elite"];
+u32 [tag="UBB - Master"];
+u32 [tag="UDB - Basic"];
+u32 [tag="UDB - Expert"];
+u32 [tag="UDB - Elite"];
+u32 [tag="UDB - Master"];
+u32 [tag="DCS - Basic"];
+u32 [tag="DCS - Expert"];
+u32 [tag="DCS - Elite"];
+u32 [tag="DCS - Master"];
+u32 [tag="Selection (0-All 1-Choice)"];
+repeat 9
+{
+i8 [tag="ID Type"];
+cstr [len=3, hidden];
+}
+repeat 9
+{
+x32 [tag="ID Subjek"];
+}
+repeat 9
+{
+i8 [tag="Кол-во"];
+}
+cstr [len=3, hidden];
+i32 [tag="Special Features"];
+cstr [len=1024] "Speacial Description";
+}
+
+struct Rank [preload=1]
+{
+u8 "Number";
+cstr [len=32] "Bellato Title";
+cstr [len=32] "Cora Title";
+cstr [len=32] "Accretia Title";
+u8 DWORD;
+u16 DWORD;
+u32 [tag="????"] DWORD;
+u32 [tag="????"] DWORD;
+u32 [tag="????"] DWORD;
+}
+
+struct Mob [preload=1]
+{
+u32 [tag="index"];
+x32 [tag="ID"];
+cstr [len=32, id=MonsterName] "Name";
+i8 [tag="Race"];
+i8 [tag="Type of Moba"];
+i8 [tag="Level", id=MonsterLevel];
+i8 [tag="----i8----"];
+i32 [tag="HP"];
+i32 [tag="----i32----"];
+i32 [tag="Type"];
+float [tag="AttExt"];
+i8 [tag="MovSpd"];
+i8 [tag="WarMovSpd"];
+i8 [tag="Width"];
+i8 [tag="----i8----"];
+float [tag="Size of Mob"];
+i32 [tag="----i32----"];
+i32 [tag="MonsterCondition"];
+x32 [tag="EffectCode"];
+i32 [tag="AttEffType"];
+i32 [tag="DefEffType"];
+i32 [tag="----i32----"];
+i32 [tag="Element of Mob"];
+i32 [tag="----i32----"];
+repeat 27
+{
+x32 [tag="ID Spells"];
+}
+i32 [tag="??? ????"];
+i32 [tag="KillPoint"];
+i32 [tag="AttSpd"];
+i32 [tag="AttRangeType"];
+nodename (": "+MonsterName+" ["+MonsterLevel+"]");
+}
+
+struct Emoticon [preload=1]
+{
+u32 "Satus Team(0= inactive, 1=battle)";
+u32 "Team number";
+u32 "ID Team";
+cstr [len=32] "Team name";
+u32 [tag="Race and Sex"];
+}
+
+struct PT [preload=1]
+{
+u8 [tag="Level", id=LevelPT];
+u8 Melee;
+u8 Range;
+u8 RaceSpecial;
+u8 Force;
+u8 Shield;
+u8 Defense;
+u8 Wep/ShieldCraft;
+u8 ArmorCraft;
+u8 AmmoCraft;
+u8 BasicMelee;
+u8 ExpertMelee;
+u8 EliteMelee;
+u8 MasterMelee;
+u8 BasicRange;
+u8 ExpertRange;
+u8 EliteRange;
+u8 MasterRange;
+u8 BasicDark;
+u8 ExpertDark;
+u8 EliteDark;
+u8 MasterDark;
+u8 BasicHoly;
+u8 ExpertHoly;
+u8 EliteHoly;
+u8 MasterHoly;
+u8 BasicFire;
+u8 ExpertFire;
+u8 EliteFire;
+u8 MasterFire;
+u8 BasicAqua;
+u8 ExpertAqua;
+u8 EliteAqua;
+u8 MasterAqua;
+u8 BasicTerra;
+u8 ExpertTerra;
+u8 EliteTerra;
+u8 MasterTerra;
+u8 BasicWind;
+u8 ExpertWind;
+u8 EliteWind;
+u8 MasterWind;
+u8 DWORD;
+u8 DWORD;
+u8 DWORD;
+u8 DWORD;
+nodename (": "+LevelPT);
+}
+
+struct PlayerEXP [preload=1]
+{
+double [tag="Bellato"];
+double [tag="Cora"];
+double [tag="Accretia"];
+}
+
+struct Animus [preload=1]
+{
+i32 [tag="Level", id=LevelAnimus];
+i32 "Label";
+i32 "ForLvlUpExp";
+i32 "ForLvlUpExp";
+u32 "----HP----";
+u32 "---FP---";
+i32 "HP recovery speed";
+i32 "Max HP restored";
+i32 "FP recovery speed";
+i32 "Max restored HP";
+u32 "Attack";
+u32 "Def";
+u32 "ForceAttStd";
+i32 "AttSklUnit";
+i32 DWORD;
+i32 DWORD;
+i32 DWORD;
+i32 DWORD;
+i32 DWORD;
+u32 hz;
+i8 "Fire";
+i8 "Water";
+i8 "Earth";
+i8 "Wind";
+i32 "Attack speed";
+float "AttExt";
+i8 "---";
+i8 "Movement Speed";
+i8 "width";
+u8 "---";
+float "---";
+i32 "AttEffType";
+i32 "DefEffType";
+i32 DWORD;
+nodename (": "+LevelAnimus);
+}
