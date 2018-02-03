@@ -1,0 +1,39 @@
+// STRS by Nuna
+
+[filemask="MonsterCharacter.dat"]
+struct ControlChipHP
+{
+	child "Accretia"							[offset=(0x55528),    count=1];
+	child "Bellato"								[offset=(0x55EDC),    count=1];
+	child "Cora"								[offset=(0x56890),    count=1];
+}
+
+struct "Accretia" [preload=1, tableview=1]
+	{
+	cstr [value=("Change Chip HP Here!!")] Information;
+	cstr [value=("04B00")] MonsterCode;
+    float [tag="Total HP", id=ChipHP];
+	float [tag=Delay of Healing in Second];
+	float [tag=Total HP per Healing];
+	nodename (": "+ChipHP);
+	}
+
+struct "Bellato" [preload=1, tableview=1]
+	{
+	cstr [value=("Change Chip HP Here!!")] Information;
+	cstr [value=("04B01")] MonsterCode;
+    float [tag="Total HP", id=ChipHP];
+	float [tag=Delay of Healing in Second];
+	float [tag=Total HP per Healing];
+	nodename (": "+ChipHP);
+	}
+
+struct "Cora" [preload=1, tableview=1]
+	{
+	cstr [value=("Change Chip HP Here!!")] Information;
+	cstr [value=("04B02")] MonsterCode;
+    float [tag="Total HP", id=ChipHP];
+	float [tag=Delay of Healing in Second];
+	float [tag=Total HP per Healing];
+	nodename (": "+ChipHP);
+	}
